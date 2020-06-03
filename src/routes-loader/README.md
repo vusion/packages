@@ -15,7 +15,7 @@
 - `any$`会替换为通配类型`any*`
 - `~outside`会将该文件及子文件的对应路由拉出嵌套结构
 
-可以参考[normalize](normalize) 函数
+可以参考 [normalize](https://github.com/vusion/packages/blob/master/src/routes-loader/lib/utils.js#L35) 函数
 
 ### 示例
 
