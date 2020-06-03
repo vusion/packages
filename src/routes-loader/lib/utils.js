@@ -18,7 +18,7 @@ exports.KEYWORD_DIRS = [
 
 /**
  * 占位型目录
- * 为了方便归类视图，占位目录结构，但不体现在路径中
+ * 只是为了方便归类视图文件，占位目录名不体现在路径上
  */
 exports.HOLDER_DIRS = [
     'views',
@@ -108,7 +108,8 @@ exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
         const route = routesMap[routePath];
         if (route.children && route.children.length) {
             const firstChild = route.children.find((child) => child.first) || route.children[0];
-            route.children.unshift({ path: '', redirect: firstChild.path });
+            if (firstChild.path[0] !== ':')
+                route.children.unshift({ path: '', redirect: firstChild.path });
         }
     });
     routes.push(routesMap['']);
@@ -152,7 +153,7 @@ exports.renderRoutes = function (routes, comments = false, level = 1) {
     const indent = ' '.repeat((level - 1) * 4);
     return '[\n' + routes.map((route) => {
         const indent = ' '.repeat(level * 4);
-        return (comments && route.routePath ? indent + `/* for routes.map.js: ${route.routePath} */\n` : '')
+        return (comments && route.routePath !== undefined ? indent + `/* for routes.map.js: '${route.routePath}' */\n` : '')
         + exports.renderRoute(route, comments, level) + ',\n';
     }).join('') + indent + ']';
 };
