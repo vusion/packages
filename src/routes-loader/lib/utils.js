@@ -97,6 +97,9 @@ exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
             routesMap[route.parentPath] = parent;
             parse(parent);
         }
+        if (!parent.filePath) {
+            parent.filePath = exports.WRAPPER_PATH;
+        }
 
         parent.children = parent.children || [];
         parent.children.push(route);
@@ -153,7 +156,7 @@ exports.renderRoutes = function (routes, comments = false, level = 1) {
     const indent = ' '.repeat((level - 1) * 4);
     return '[\n' + routes.map((route) => {
         const indent = ' '.repeat(level * 4);
-        return (comments && route.routePath !== undefined ? indent + `/* for routes.map.js: '${route.routePath}' */\n` : '')
+        return (comments && route.routePath !== undefined ? indent + `/* '${route.routePath}' */\n` : '')
         + exports.renderRoute(route, comments, level) + ',\n';
     }).join('') + indent + ']';
 };
