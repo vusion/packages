@@ -1,0 +1,32 @@
+{
+    "center": {
+        "path": "center",
+        "parentPath": "",
+        "routePath": "center",
+        "filePath": "./views/center.vue"
+    },
+    "": {
+        "path": "",
+        "parentPath": "",
+        "routePath": "",
+        "filePath": "./views/index.vue"
+    },
+    "leaf": {
+        "path": "leaf",
+        "parentPath": "",
+        "routePath": "leaf",
+        "filePath": "./views/leaf.vue"
+    },
+    "security": {
+        "path": "security",
+        "parentPath": "",
+        "routePath": "security",
+        "filePath": "./views/security.vue"
+    },
+    "setting": {
+        "path": "setting",
+        "parentPath": "",
+        "routePath": "setting",
+        "filePath": "./views/setting.vue"
+    }
+}

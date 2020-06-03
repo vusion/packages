@@ -1,0 +1,182 @@
+{
+    "dashboard/app": {
+        "path": "app",
+        "parentPath": "dashboard",
+        "routePath": "dashboard/app",
+        "filePath": "./dashboard/app.vue"
+    },
+    "dashboard/account/center": {
+        "path": "center",
+        "parentPath": "dashboard/account",
+        "routePath": "dashboard/account/center",
+        "filePath": "./dashboard/account/views/center.vue"
+    },
+    "dashboard/account": {
+        "path": "account",
+        "parentPath": "dashboard",
+        "routePath": "dashboard/account",
+        "filePath": "./dashboard/account/views/index.vue"
+    },
+    "dashboard/account/leaf": {
+        "path": "leaf",
+        "parentPath": "dashboard/account",
+        "routePath": "dashboard/account/leaf",
+        "filePath": "./dashboard/account/views/leaf.vue"
+    },
+    "dashboard/account/security": {
+        "path": "security",
+        "parentPath": "dashboard/account",
+        "routePath": "dashboard/account/security",
+        "filePath": "./dashboard/account/views/security.vue"
+    },
+    "dashboard/account/setting": {
+        "path": "setting",
+        "parentPath": "dashboard/account",
+        "routePath": "dashboard/account/setting",
+        "filePath": "./dashboard/account/views/setting.vue"
+    },
+    "dashboard/exception/404": {
+        "path": "404",
+        "parentPath": "dashboard/exception",
+        "routePath": "dashboard/exception/404",
+        "filePath": "./dashboard/exception/views/404.vue"
+    },
+    "dashboard/exception/500": {
+        "path": "500",
+        "parentPath": "dashboard/exception",
+        "routePath": "dashboard/exception/500",
+        "filePath": "./dashboard/exception/views/500.vue"
+    },
+    "dashboard/views": {
+        "path": "views",
+        "parentPath": "dashboard",
+        "routePath": "dashboard/views",
+        "filePath": "./dashboard/layout/views/index.vue"
+    },
+    "dashboard/notice/detail": {
+        "path": "detail",
+        "parentPath": "dashboard/notice",
+        "routePath": "dashboard/notice/detail",
+        "filePath": "./dashboard/notice/views/detail.vue"
+    },
+    "dashboard/notice/list": {
+        "path": "list",
+        "parentPath": "dashboard/notice",
+        "routePath": "dashboard/notice/list",
+        "filePath": "./dashboard/notice/views/list.vue"
+    },
+    "dashboard/overview": {
+        "path": "overview",
+        "parentPath": "dashboard",
+        "routePath": "dashboard/overview",
+        "filePath": "./dashboard/overview/views/index.vue"
+    },
+    "dashboard/demo/detail/:monitor?": {
+        "path": ":monitor?",
+        "parentPath": "dashboard/demo/detail",
+        "routePath": "dashboard/demo/detail/:monitor?",
+        "filePath": "./dashboard/demo/views/detail/_monitor_.vue"
+    },
+    "dashboard/demo/detail": {
+        "path": "detail",
+        "parentPath": "dashboard/demo",
+        "routePath": "dashboard/demo/detail",
+        "filePath": "./dashboard/demo/views/detail/index.vue"
+    },
+    "dashboard/demo/detail/info": {
+        "path": "info",
+        "parentPath": "dashboard/demo/detail",
+        "routePath": "dashboard/demo/detail/info",
+        "filePath": "./dashboard/demo/views/detail/info.vue"
+    },
+    "dashboard/demo/form/basic": {
+        "path": "basic",
+        "parentPath": "dashboard/demo/form",
+        "routePath": "dashboard/demo/form/basic",
+        "filePath": "./dashboard/demo/views/form/basic.vue"
+    },
+    "dashboard/demo/form/setting": {
+        "path": "setting",
+        "parentPath": "dashboard/demo/form",
+        "routePath": "dashboard/demo/form/setting",
+        "filePath": "./dashboard/demo/views/form/setting.vue"
+    },
+    "dashboard/demo/list/basic": {
+        "path": "basic",
+        "parentPath": "dashboard/demo/list",
+        "routePath": "dashboard/demo/list/basic",
+        "filePath": "./dashboard/demo/views/list/basic.vue"
+    },
+    "dashboard/demo/list/localList": {
+        "path": "localList",
+        "parentPath": "dashboard/demo/list",
+        "routePath": "dashboard/demo/list/localList",
+        "filePath": "./dashboard/demo/views/list/localList.vue"
+    },
+    "dashboard/demo/micro/cloud-admin-1**": {
+        "path": "cloud-admin-1**",
+        "parentPath": "dashboard/demo/micro",
+        "routePath": "dashboard/demo/micro/cloud-admin-1**",
+        "filePath": "./dashboard/demo/views/micro/cloud-admin-1$$.vue"
+    },
+    "dashboard/demo/micro/cloud-admin-2**": {
+        "path": "cloud-admin-2**",
+        "parentPath": "dashboard/demo/micro",
+        "routePath": "dashboard/demo/micro/cloud-admin-2**",
+        "filePath": "./dashboard/demo/views/micro/cloud-admin-2$$.vue"
+    },
+    "dashboard/demo/router/list": {
+        "path": "list",
+        "parentPath": "dashboard/demo/router",
+        "routePath": "dashboard/demo/router/list",
+        "filePath": "./dashboard/demo/views/router/list.vue"
+    },
+    "dashboard/demo/router/setting": {
+        "path": "setting",
+        "parentPath": "dashboard/demo/router",
+        "routePath": "dashboard/demo/router/setting",
+        "filePath": "./dashboard/demo/views/router/setting.vue"
+    },
+    "dashboard/demo/list/~tabs/basic": {
+        "path": "dashboard/demo/list/tabs/basic",
+        "parentPath": "",
+        "routePath": "dashboard/demo/list/~tabs/basic",
+        "filePath": "./dashboard/demo/views/list/~tabs/basic.vue"
+    },
+    "dashboard/demo/list/~tabs": {
+        "path": "dashboard/demo/list/tabs",
+        "parentPath": "",
+        "routePath": "dashboard/demo/list/~tabs",
+        "filePath": "./dashboard/demo/views/list/~tabs/index.vue"
+    },
+    "dashboard/demo/list/~tabs/localList": {
+        "path": "dashboard/demo/list/tabs/localList",
+        "parentPath": "",
+        "routePath": "dashboard/demo/list/~tabs/localList",
+        "filePath": "./dashboard/demo/views/list/~tabs/localList.vue"
+    },
+    "dashboard/demo/list/~tabs/noPageList": {
+        "path": "dashboard/demo/list/tabs/noPageList",
+        "parentPath": "",
+        "routePath": "dashboard/demo/list/~tabs/noPageList",
+        "filePath": "./dashboard/demo/views/list/~tabs/noPageList.vue"
+    },
+    "dashboard/demo/router/detail": {
+        "path": "detail",
+        "parentPath": "dashboard/demo/router",
+        "routePath": "dashboard/demo/router/detail",
+        "filePath": "./dashboard/demo/views/router/detail/index.vue"
+    },
+    "dashboard/demo/router/detail/info": {
+        "path": "info",
+        "parentPath": "dashboard/demo/router/detail",
+        "routePath": "dashboard/demo/router/detail/info",
+        "filePath": "./dashboard/demo/views/router/detail/info.vue"
+    },
+    "dashboard/demo/router/detail/monitor": {
+        "path": "monitor",
+        "parentPath": "dashboard/demo/router/detail",
+        "routePath": "dashboard/demo/router/detail/monitor",
+        "filePath": "./dashboard/demo/views/router/detail/monitor.vue"
+    }
+}
