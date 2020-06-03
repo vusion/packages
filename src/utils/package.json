@@ -1,0 +1,33 @@
+{
+  "name": "@vusion/utils",
+  "description": "Vusion Utils",
+  "version": "0.4.8",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./dist/index.js",
+  "repository": "vusion/packages",
+  "homepage": "http://vusion.github.io",
+  "bugs": {
+    "url": "http://github.com/vusion/packages/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vusion",
+    "utils"
+  ],
+  "tags": [
+    "vusion",
+    "utils"
+  ],
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.12.0",
+    "eslint-config-vusion": "^3.0.1",
+    "husky": "^0.14.3",
+    "vusion-hooks": "^0.2.1"
+  }
+}
