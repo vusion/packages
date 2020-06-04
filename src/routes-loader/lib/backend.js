@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const globby = require('globby');
-const { createRoute, normalize } = require('../lib/utils');
+const _ = require('../lib/utils');
 
 /**
  * 从目录中获得路由 Map
@@ -54,10 +54,9 @@ exports.getRoutesMapFromDir = function getRoutesMapFromDir(basePath, filters = {
             return true;
         }).forEach((filePath) => {
             filePath = filePath.replace(/\\/g, '/');
-            let routePath = ('/' + filePath).replace(/(\/index)?\.(vue|md)$/, '').replace(/^\//, '');
-            routePath = normalize(routePath);
+            const routePath = _.normalize(_.transform(filePath));
 
-            const route = createRoute(routePath);
+            const route = _.createRoute(routePath);
             route.filePath = './' + filePath;
             // route.fullPath = path.resolve(basePath, filePath);
 

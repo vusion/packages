@@ -28,6 +28,14 @@ exports.HOLDER_DIRS = [
 exports.WRAPPER_PATH = 'cloud-ui.vusion/src/layouts/l-wrapper.vue';
 
 /**
+ * 从文件路径转为路由路径
+ */
+exports.transform = (filePath) => {
+    filePath = filePath.replace(/\\/g, '/');
+    return ('/' + filePath).replace(/(\/index)?\.(vue|md)$/, '').replace(/^\//, '');
+};
+
+/**
  * 对路由进行规范化
  * @param routePath 路由路径
  * @TODO ~类型比较特殊

@@ -19,7 +19,7 @@ export default { path: 'demo', component: require('cloud-ui.vusion/src/layouts/l
         /* 'list/localList' */
         { path: 'localList', component: () => import(/* webpackChunkName: "demo" */ './views/list/localList.vue'), name: 'demo.localList', meta: {title:'本地分页',crumb:'本地分页'} },
         /* 'list/tabs' */
-        { path: 'tabs', meta: {title:'列表页',crumb:{title:'列表页'}}, children: [
+        { path: 'tabs', component: require('cloud-ui.vusion/src/layouts/l-wrapper.vue').default, meta: {title:'列表页',crumb:{title:'列表页'}}, children: [
             { path: '', redirect: 'basic' },
             /* 'list/tabs/basic' */
             { path: 'basic', name: 'demo.tabsList', meta: {title:'列表页',crumb:{title:'列表页'}} },
@@ -46,7 +46,7 @@ export default { path: 'demo', component: require('cloud-ui.vusion/src/layouts/l
     /* 'list/~tabs/noPageList' */
     { path: 'list/tabs/noPageList', component: () => import(/* webpackChunkName: "demo" */ './views/list/~tabs/noPageList.vue') },
     /* 'form' */
-    { path: 'form', meta: {title:'表单',crumb:'表单'}, children: [
+    { path: 'form', component: require('cloud-ui.vusion/src/layouts/l-wrapper.vue').default, meta: {title:'表单',crumb:'表单'}, children: [
         { path: '', redirect: 'basic' },
         /* 'form/basic' */
         { path: 'basic', component: () => import(/* webpackChunkName: "demo" */ './views/form/basic.vue'), meta: {title:'基础表单',crumb:'基础表单'} },
@@ -54,7 +54,7 @@ export default { path: 'demo', component: require('cloud-ui.vusion/src/layouts/l
         { path: 'setting', component: () => import(/* webpackChunkName: "demo" */ './views/form/setting.vue'), name: 'demo.form.setting', meta: {title:'设置',crumb:'设置'} },
     ] },
     /* 'router' */
-    { path: 'router', meta: {title:'路由',crumb:'路由',locks:[{include:[/router/],params:['search','demo.router.list.page']}]}, children: [
+    { path: 'router', component: require('cloud-ui.vusion/src/layouts/l-wrapper.vue').default, meta: {title:'路由',crumb:'路由',locks:[{include:[/router/],params:['search','demo.router.list.page']}]}, children: [
         { path: '', redirect: 'list' },
         /* 'router/list' */
         { path: 'list', component: () => import(/* webpackChunkName: "demo" */ './views/router/list.vue'), name: 'demo.router.list', meta: {title:'列表(路由)',crumb:'列表(路由)'} },

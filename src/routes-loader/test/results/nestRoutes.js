@@ -11,4 +11,4 @@
         /* 'setting' */
         { path: 'setting', component: require('./views/setting.vue').default },
     ] },
-];
+]
