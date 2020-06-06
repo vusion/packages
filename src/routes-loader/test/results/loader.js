@@ -33,18 +33,18 @@ export default { path: 'demo', component: require('cloud-ui.vusion/src/layouts/l
     { path: 'micro', component: require('cloud-ui.vusion/src/layouts/l-wrapper.vue').default, children: [
         { path: '', redirect: 'cloud-admin-1**' },
         /* 'micro/cloud-admin-1**' */
-        { path: 'cloud-admin-1**', component: () => import(/* webpackChunkName: "demo" */ './views/micro/cloud-admin-1$$.vue') },
+        { path: 'cloud-admin-1**', component: () => import(/* webpackChunkName: "demo" */ './views/micro/cloud-admin-1++.vue') },
         /* 'micro/cloud-admin-2**' */
-        { path: 'cloud-admin-2**', component: () => import(/* webpackChunkName: "demo" */ './views/micro/cloud-admin-2$$.vue') },
+        { path: 'cloud-admin-2**', component: () => import(/* webpackChunkName: "demo" */ './views/micro/cloud-admin-2++.vue') },
     ] },
-    /* 'list/~tabs/basic' */
-    { path: 'list/tabs/basic', component: () => import(/* webpackChunkName: "demo" */ './views/list/~tabs/basic.vue') },
-    /* 'list/~tabs' */
-    { path: 'list/tabs', component: () => import(/* webpackChunkName: "demo" */ './views/list/~tabs/index.vue') },
-    /* 'list/~tabs/localList' */
-    { path: 'list/tabs/localList', component: () => import(/* webpackChunkName: "demo" */ './views/list/~tabs/localList.vue') },
-    /* 'list/~tabs/noPageList' */
-    { path: 'list/tabs/noPageList', component: () => import(/* webpackChunkName: "demo" */ './views/list/~tabs/noPageList.vue') },
+    /* 'list/=tabs/basic' */
+    { path: 'list/tabs/basic', component: () => import(/* webpackChunkName: "demo" */ './views/list/=tabs/basic.vue') },
+    /* 'list/=tabs' */
+    { path: 'list/tabs', component: () => import(/* webpackChunkName: "demo" */ './views/list/=tabs/index.vue') },
+    /* 'list/=tabs/localList' */
+    { path: 'list/tabs/localList', component: () => import(/* webpackChunkName: "demo" */ './views/list/=tabs/localList.vue') },
+    /* 'list/=tabs/noPageList' */
+    { path: 'list/tabs/noPageList', component: () => import(/* webpackChunkName: "demo" */ './views/list/=tabs/noPageList.vue') },
     /* 'form' */
     { path: 'form', component: require('cloud-ui.vusion/src/layouts/l-wrapper.vue').default, meta: {title:'表单',crumb:'表单'}, children: [
         { path: '', redirect: 'basic' },

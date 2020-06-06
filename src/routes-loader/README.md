@@ -12,8 +12,8 @@
 - 以下目录为占位符目录，只是为了方便归类视图文件，占位目录名不体现在路径上：`views`、`layout`
 - `_id`会替换为变量类型`:id`
 - `_id_`会替换为可选变量类型`:id?`
-- `any$`会替换为通配类型`any*`
-- `~outside`会将该文件及子文件的对应路由拉出嵌套结构
+- `any+`会替换为通配类型`any*`
+- `=outside`会将该文件及子文件的路径做为固定路由，拉出嵌套结构
 
 可以参考 [normalize](https://github.com/vusion/packages/blob/master/src/routes-loader/lib/utils.js#L35) 函数。
 
@@ -36,7 +36,7 @@
 │   │   │   ├─ index.vue    #
 │   │   │   ├─ info.vue     #
 │   │   │   ├─ monitor.vue  #
-│   │   │   ├─ ~deep/       #
+│   │   │   ├─ =deep/       #
 │   │   │   │   ├─ list.vue #
 │   │   └─ ...
 ```
@@ -55,7 +55,7 @@ export default {
         ] },
         { path: 'micro', component: LWrapper, children: [
             { path: '', redirect: 'cloud**' },
-            { path: 'cloud**', component: () => import(/* webpackChunkName: 'account' */ './views/micro/cloud.vue') },
+            { path: 'cloud**', component: () => import(/* webpackChunkName: 'account' */ './views/micro/cloud++.vue') },
         ] },
         { path: 'detail', component: () => import(/* webpackChunkName: 'account' */ './views/index.vue'), children: [
             { path: '', redirect: 'info' },

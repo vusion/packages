@@ -117,13 +117,13 @@
         "path": "cloud-admin-1**",
         "parentPath": "dashboard/demo/micro",
         "routePath": "dashboard/demo/micro/cloud-admin-1**",
-        "filePath": "./dashboard/demo/views/micro/cloud-admin-1$$.vue"
+        "filePath": "./dashboard/demo/views/micro/cloud-admin-1++.vue"
     },
     "dashboard/demo/micro/cloud-admin-2**": {
         "path": "cloud-admin-2**",
         "parentPath": "dashboard/demo/micro",
         "routePath": "dashboard/demo/micro/cloud-admin-2**",
-        "filePath": "./dashboard/demo/views/micro/cloud-admin-2$$.vue"
+        "filePath": "./dashboard/demo/views/micro/cloud-admin-2++.vue"
     },
     "dashboard/demo/router/list": {
         "path": "list",
@@ -137,29 +137,29 @@
         "routePath": "dashboard/demo/router/setting",
         "filePath": "./dashboard/demo/views/router/setting.vue"
     },
-    "dashboard/demo/list/~tabs/basic": {
+    "dashboard/demo/list/=tabs/basic": {
         "path": "dashboard/demo/list/tabs/basic",
         "parentPath": "",
-        "routePath": "dashboard/demo/list/~tabs/basic",
-        "filePath": "./dashboard/demo/views/list/~tabs/basic.vue"
+        "routePath": "dashboard/demo/list/=tabs/basic",
+        "filePath": "./dashboard/demo/views/list/=tabs/basic.vue"
     },
-    "dashboard/demo/list/~tabs": {
+    "dashboard/demo/list/=tabs": {
         "path": "dashboard/demo/list/tabs",
         "parentPath": "",
-        "routePath": "dashboard/demo/list/~tabs",
-        "filePath": "./dashboard/demo/views/list/~tabs/index.vue"
+        "routePath": "dashboard/demo/list/=tabs",
+        "filePath": "./dashboard/demo/views/list/=tabs/index.vue"
     },
-    "dashboard/demo/list/~tabs/localList": {
+    "dashboard/demo/list/=tabs/localList": {
         "path": "dashboard/demo/list/tabs/localList",
         "parentPath": "",
-        "routePath": "dashboard/demo/list/~tabs/localList",
-        "filePath": "./dashboard/demo/views/list/~tabs/localList.vue"
+        "routePath": "dashboard/demo/list/=tabs/localList",
+        "filePath": "./dashboard/demo/views/list/=tabs/localList.vue"
     },
-    "dashboard/demo/list/~tabs/noPageList": {
+    "dashboard/demo/list/=tabs/noPageList": {
         "path": "dashboard/demo/list/tabs/noPageList",
         "parentPath": "",
-        "routePath": "dashboard/demo/list/~tabs/noPageList",
-        "filePath": "./dashboard/demo/views/list/~tabs/noPageList.vue"
+        "routePath": "dashboard/demo/list/=tabs/noPageList",
+        "filePath": "./dashboard/demo/views/list/=tabs/noPageList.vue"
     },
     "dashboard/demo/router/detail": {
         "path": "detail",

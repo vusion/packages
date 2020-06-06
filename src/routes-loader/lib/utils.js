@@ -38,13 +38,12 @@ exports.transform = (filePath) => {
 /**
  * 对路由进行规范化
  * @param routePath 路由路径
- * @TODO ~类型比较特殊
  */
 exports.normalize = (routePath) => routePath
     .replace(new RegExp(`(^|/)(${exports.HOLDER_DIRS.join('|')})($|/)`, 'g'), '$1')
     .replace(/(^|\/)_/g, '$1:')
     .replace(/_($|\/)/g, '?$1')
-    .replace(/\$/g, '*')
+    .replace(/\+/g, '*')
     .replace(/\/$/g, '');
 
 exports.createRoute = function createRoute(routePath) {
@@ -52,8 +51,8 @@ exports.createRoute = function createRoute(routePath) {
     const [m, parentPath, currentPath] = cap || [null, '', routePath];
 
     const route = {
-        path: routePath.includes('~') ? routePath.replace(/~/g, '') : currentPath,
-        parentPath: routePath.includes('~') ? '' : parentPath,
+        path: routePath.includes('=') ? routePath.replace(/[=]/g, '') : currentPath,
+        parentPath: routePath.includes('=') ? '' : parentPath,
         routePath,
     };
 
