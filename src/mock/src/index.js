@@ -1,6 +1,6 @@
 import user from './services/user';
 import lang from './services/lang';
-import instance from './services/instance';
+import entity from './services/entity';
 
 export * from './utils';
 
@@ -8,7 +8,7 @@ export * from './utils';
 export const service = {
     user,
     lang,
-    instance,
+    entity,
 };
 
 export default {
