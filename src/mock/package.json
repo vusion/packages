@@ -1,7 +1,7 @@
 {
   "name": "@vusion/mock",
   "description": "Vusion mock",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./dist/index.js",
   "repository": "vusion/packages",
