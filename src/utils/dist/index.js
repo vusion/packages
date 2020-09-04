@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.installRules = exports.installValidators = exports.mapComponents = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -12,6 +13,13 @@ exports.installFilters = installFilters;
 exports.supportOverrideWatch = supportOverrideWatch;
 exports.installOptions = installOptions;
 exports.install = install;
+
+var _at = require('lodash/at');
+
+var _at2 = _interopRequireDefault(_at);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * 将 Components 数组转换为对象
  * @deprecated
@@ -141,6 +149,28 @@ function installOptions(Vue) {
         });
 
         return message;
+    };
+
+    Vue.prototype.$at = Vue.prototype.$at || function (obj, propertyPath) {
+        if (!propertyPath) return obj;else return (0, _at2.default)(obj, [propertyPath])[0];
+    };
+
+    Vue.prototype.$setAt = Vue.prototype.$setAt || function (obj, propertyPath, value) {
+        var lastIndex = propertyPath.lastIndexOf('.');
+        if (lastIndex === -1) return Vue.prototype.$set(obj, propertyPath, value);else {
+            var prepath = propertyPath.slice(0, lastIndex);
+            var subpath = propertyPath.slice(lastIndex + 1);
+            return Vue.prototype.$set((0, _at2.default)(obj, prepath), subpath, value);
+        }
+    };
+
+    Vue.prototype.$deleteAt = Vue.prototype.$setAt || function (obj, propertyPath) {
+        var lastIndex = propertyPath.lastIndexOf('.');
+        if (lastIndex === -1) return Vue.prototype.$delete(obj, propertyPath);else {
+            var prepath = propertyPath.slice(0, lastIndex);
+            var subpath = propertyPath.slice(lastIndex + 1);
+            return Vue.prototype.$delete((0, _at2.default)(obj, prepath), subpath);
+        }
     };
 
     // Support override supportOverrideWatch

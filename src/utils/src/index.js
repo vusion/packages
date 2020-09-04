@@ -1,3 +1,5 @@
+import at from 'lodash/at';
+
 /**
  * 将 Components 数组转换为对象
  * @deprecated
@@ -133,6 +135,35 @@ export function installOptions(Vue) {
 
         return message;
     };
+
+    Vue.prototype.$at = Vue.prototype.$at || function(obj, propertyPath) {
+        if (!propertyPath)
+            return obj;
+        else
+            return at(obj, [propertyPath])[0];
+    }
+
+    Vue.prototype.$setAt = Vue.prototype.$setAt || function(obj, propertyPath, value) {
+        const lastIndex = propertyPath.lastIndexOf('.');
+        if (lastIndex === -1)
+            return Vue.prototype.$set(obj, propertyPath, value)
+        else {
+            let prepath = propertyPath.slice(0, lastIndex);
+            let subpath = propertyPath.slice(lastIndex + 1);
+            return Vue.prototype.$set(Vue.prototype.$at(obj, prepath), subpath, value);
+        }
+    }
+
+    Vue.prototype.$deleteAt = Vue.prototype.$setAt || function(obj, propertyPath) {
+        const lastIndex = propertyPath.lastIndexOf('.');
+        if (lastIndex === -1)
+            return Vue.prototype.$delete(obj, propertyPath)
+        else {
+            let prepath = propertyPath.slice(0, lastIndex);
+            let subpath = propertyPath.slice(lastIndex + 1);
+            return Vue.prototype.$delete(Vue.prototype.$at(obj, prepath), subpath);
+        }
+    }
 
     // Support override supportOverrideWatch
     supportOverrideWatch(Vue);
