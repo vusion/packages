@@ -117,8 +117,8 @@ exports.nestRoutes = function (routesMap, rootPath = '', restRedirect = false) {
     Object.keys(routesMap).forEach((routePath) => {
         const route = routesMap[routePath];
         if (route.children && route.children.length) {
-            const firstChild = route.children.find((child) => child.first) || route.children[0];
-            if (firstChild.path[0] !== ':')
+            const firstChild = route.children.find((child) => child.first);
+            if (firstChild && firstChild.path[0] !== ':')
                 route.children.unshift({ path: '', redirect: firstChild.path });
         }
     });

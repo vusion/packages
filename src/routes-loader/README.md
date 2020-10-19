@@ -31,7 +31,7 @@
 │   │   ├─ settings/        #
 │   │   │   ├─ _id_.vue     #
 │   │   ├─ micro/           #
-│   │   │   ├─ cloud$$.vue  #
+│   │   │   ├─ cloud++.vue  #
 │   │   ├─ detail/          #
 │   │   │   ├─ index.vue    #
 │   │   │   ├─ info.vue     #
