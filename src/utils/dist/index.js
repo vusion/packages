@@ -160,7 +160,7 @@ function installOptions(Vue) {
         if (lastIndex === -1) return Vue.prototype.$set(obj, propertyPath, value);else {
             var prepath = propertyPath.slice(0, lastIndex);
             var subpath = propertyPath.slice(lastIndex + 1);
-            return Vue.prototype.$set((0, _at2.default)(obj, prepath), subpath, value);
+            return Vue.prototype.$set(Vue.prototype.$at(obj, prepath), subpath, value);
         }
     };
 
@@ -169,7 +169,7 @@ function installOptions(Vue) {
         if (lastIndex === -1) return Vue.prototype.$delete(obj, propertyPath);else {
             var prepath = propertyPath.slice(0, lastIndex);
             var subpath = propertyPath.slice(lastIndex + 1);
-            return Vue.prototype.$delete((0, _at2.default)(obj, prepath), subpath);
+            return Vue.prototype.$delete(Vue.prototype.$at(obj, prepath), subpath);
         }
     };
 
