@@ -152,7 +152,9 @@ function installOptions(Vue) {
     };
 
     Vue.prototype.$at = Vue.prototype.$at || function (obj, propertyPath) {
-        if (!propertyPath) return obj;else return (0, _at2.default)(obj, [propertyPath])[0];
+        if (propertyPath == undefined) {
+            return undefined;
+        } else return (0, _at2.default)(obj, [propertyPath])[0];
     };
 
     Vue.prototype.$setAt = Vue.prototype.$setAt || function (obj, propertyPath, value) {

@@ -137,8 +137,9 @@ export function installOptions(Vue) {
     };
 
     Vue.prototype.$at = Vue.prototype.$at || function(obj, propertyPath) {
-        if (!propertyPath)
-            return obj;
+        if (propertyPath == undefined) {
+            return undefined;
+        }
         else
             return at(obj, [propertyPath])[0];
     }
